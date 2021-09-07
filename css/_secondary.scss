@@ -1,0 +1,123 @@
+.secondary {
+    background-color: $ColorLightGrayishBlue;
+    margin-top: 6.2rem;
+    position: relative;
+    padding: 3.1rem 0;
+    &::after {
+        content: ("");
+        background-image: url(../images/bg-curve-mobile.svg);
+        background-size: cover;
+        height: 5rem;
+        width: 100%;
+        position: absolute;
+        top: -3.1rem;
+        left: 0;
+    }
+    .description {
+        @include flex(column, center);
+        flex-direction: column-reverse;
+        .illustration-2 {
+            margin-bottom: 2.5rem;
+        }
+        .sec-desc {
+            h2 {
+                font-size: 1rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: .9rem;
+                margin-bottom: 1rem;
+                padding: 0;
+                text-align: left;
+            }
+            a {
+                color: $ColorModerateCyan;
+                font-size: .8rem;
+                text-decoration: none;
+                padding: .5rem;
+                border-bottom: 1px solid $ColorModerateCyan;
+                text-align: center;
+                margin: 0 5rem 0 5rem;
+                &::after {
+                    content: url(../images/icon-arrow.svg);
+                    padding-left: 1rem;
+                }
+            }
+            .testiominal-card {
+                margin-top: 2rem;
+                background-color: #fff;
+                width: 100%;
+                padding: 1.8rem;
+                border-radius: .4rem;
+                background-image: url(../images/icon-quotes.svg);
+                background-repeat: no-repeat;
+                background-position-x: 10%;
+                background-position-y: 10%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                .quotes {
+                    font-size: .8rem;
+                    margin: 1rem 0 1rem 0;
+                    letter-spacing: 1px;
+                    line-height: 1.7;
+                }
+                .testiominal-details {
+                    @include flex(row, start);
+                    img {
+                        border-radius: 50%;
+                        width: 15%;
+                        margin-right: .5rem;
+                    }
+                    .name {
+                        font-size: .7rem;
+                        margin-bottom: 0.2rem;
+                        margin-top: .7rem;
+                    }
+                    .info {
+                        font-size: .6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .secondary {
+        &::after {
+            background-image: url(../images/bg-curve-desktop.svg);
+            background-size: cover;
+            background-position: center center;
+            height: 3.7rem;
+            left: 0;
+        }
+        .description {
+            @include flex(column, center);
+            flex-direction: row;
+            .illustration-2 {
+                margin-bottom: 2.5rem;
+            }
+            .sec-desc {
+                h2 {
+                    font-size: 2rem;
+                    text-align: left;
+                }
+                p {
+                    font-size: .9rem;
+                }
+                a {
+                    font-size: .8rem;
+                    padding: .5rem;
+                    margin: 0;
+                    &::after {
+                        content: url(../images/icon-arrow.svg);
+                        padding-left: 1rem;
+                    }
+                }
+                .testiominal-card {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

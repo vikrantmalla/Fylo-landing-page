@@ -1,0 +1,67 @@
+        footer {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 3rem;
+            background-color: $ColorVeryDarkBlue;
+            padding: 3rem;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: .9rem;
+            }
+            .header {
+                .phone {
+                    &::before {
+                        content: url(../images/icon-phone.svg);
+                        margin-right: .7rem;
+                    }
+                }
+                .email {
+                    &::before {
+                        content: url(../images/icon-email.svg);
+                        margin-right: .7rem;
+                    }
+                }
+                img {
+                    width: 50%;
+                }
+                @include flex(column, center);
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .footer-link1 {
+                @include flex(column, center);
+                align-items: flex-start;
+                gap: 1rem;
+                margin-top: 4rem;
+            }
+            .footer-link2 {
+                @include flex(column, center);
+                align-items: flex-start;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            .social-link {
+                @include flex(row, center);
+                align-items: flex-start;
+                margin-top: 4rem;
+                .circle {
+                    border: .06rem solid #fff;
+                    border-radius: 50%;
+                    color: #fff;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: .6rem;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        @media (min-width: 768px) {
+            footer {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
