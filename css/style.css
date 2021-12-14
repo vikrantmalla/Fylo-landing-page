@@ -16,8 +16,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem;
-  padding: 0.3rem 4%;
+  padding: 3rem 4%;
 }
 
 .navigation-bar img {
@@ -137,6 +136,12 @@
   border-radius: .2rem;
   font-size: .6rem;
   width: 80%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .banner .call-to-action form button:hover {
+  opacity: .7;
 }
 
 @media (min-width: 768px) {
@@ -471,6 +476,13 @@
   border-radius: .2rem;
   font-size: .6rem;
   width: 100%;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta .container .call-to-action form button:hover {
+  opacity: .7;
 }
 
 @media (min-width: 768px) {
@@ -520,7 +532,6 @@ footer {
       grid-template-columns: repeat(1, 1fr);
   padding: 3rem;
   background-color: #070439;
-  padding: 3rem;
 }
 
 footer a {
@@ -625,7 +636,7 @@ footer .social-link {
   margin-top: 4rem;
 }
 
-footer .social-link .circle {
+footer .social-link i {
   border: .06rem solid #fff;
   border-radius: 50%;
   color: #fff;
@@ -641,7 +652,12 @@ footer .social-link .circle {
   margin-right: .6rem;
   height: 2.5rem;
   width: 2.5rem;
-  text-decoration: none;
+  cursor: pointer;
+}
+
+footer .social-link i:hover {
+  border: 0.06rem solid #3065f8;
+  color: #3065f8;
 }
 
 @media (min-width: 768px) {
@@ -662,8 +678,10 @@ html,
 body {
   height: 100%;
   width: 100%;
+  max-width: 1440px;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
 }
 
 img {

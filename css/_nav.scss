@@ -1,7 +1,6 @@
 .navigation-bar {
     @include flex(row, space-between);
-    margin: 1rem;
-    padding: 0.3rem 4%;
+    padding: 3rem 4%;
     img {
         width: 20%;
     }

@@ -3,7 +3,6 @@
             grid-template-columns: repeat(1, 1fr);
             padding: 3rem;
             background-color: $ColorVeryDarkBlue;
-            padding: 3rem;
             a {
                 color: white;
                 text-decoration: none;
@@ -45,7 +44,7 @@
                 @include flex(row, center);
                 align-items: flex-start;
                 margin-top: 4rem;
-                .circle {
+                i {
                     border: .06rem solid #fff;
                     border-radius: 50%;
                     color: #fff;
@@ -55,7 +54,11 @@
                     margin-right: .6rem;
                     height: 2.5rem;
                     width: 2.5rem;
-                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover {
+                        border: .06rem solid $ColorBrightBlue;
+                        color: $ColorBrightBlue;
+                    }
                 }
             }
         }
